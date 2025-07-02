@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>50/50 Gamble</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding-top: 100px; background-color: #222; color: white; }
+    button { font-size: 24px; padding: 10px 20px; margin-top: 20px; cursor: pointer; }
+    .result { margin-top: 40px; font-size: 32px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>🎲 50/50 Coin Flip Gamble</h1>
+  <p>Click the button to flip. Heads = You win, Tails = Host wins.</p>
+  <button onclick="flipCoin()">Flip Coin</button>
+  <div class="result" id="result">Waiting...</div>
+
+  <script>
+    function flipCoin() {
+      const roll = Math.random();
+      const result = roll < 0.5 ? "🪙 Heads — You Win!" : "🪙 Tails — Host Wins!";
+      document.getElementById("result").innerText = result;
+    }
+  </script>
+</body>
+</html>
